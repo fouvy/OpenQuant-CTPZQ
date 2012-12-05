@@ -667,11 +667,12 @@ namespace QuantBox.OQ.CTPZQ
 
                     if (null != marketDataFilter)
                     {
-                        Trade t = marketDataFilter.FilterTrade(trade, instrument.Symbol);
-                        if (null != t)
-                        {
-                            EmitNewTradeEvent(instrument, t);
-                        }
+                        //comment by fouvy, for openquant 2.9
+                        //Trade t = marketDataFilter.FilterTrade(trade, instrument.Symbol);
+                        //if (null != t)
+                        //{
+                        //    EmitNewTradeEvent(instrument, t);
+                        //}
                     }
                     else
                     {
@@ -697,11 +698,12 @@ namespace QuantBox.OQ.CTPZQ
 
                     if (null != marketDataFilter)
                     {
-                        Quote q = marketDataFilter.FilterQuote(quote, instrument.Symbol);
-                        if (null != q)
-                        {
-                            EmitNewQuoteEvent(instrument, q);
-                        }
+                        //comment by fouvy change for openquant 2.9
+                        //Quote q = marketDataFilter.FilterQuote(quote, instrument.Symbol);
+                        //if (null != q)
+                        //{
+                        //    EmitNewQuoteEvent(instrument, q);
+                        //}
                     }
                     else
                     {
